@@ -1,0 +1,135 @@
+<!--
+Nombre Completo: Edwin Carmona Cifuentes
+Clan: Dell
+fecha: 04-06-2024
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="almacen sobre productos de construcción" />
+  <meta name="keywords" content="construcción moldeados obras">
+  <meta name="sitedomain" content="https://riwi.io">
+  <meta name="organization" content="ConstruPro">
+  <meta name="author" content="ECC97">
+  <meta name="designer" content="ECC97">
+  <meta name="copyright" content="© 2024 Riwi. All rights reserved">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="revisit-after" content="15days">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4327/4327428.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Administración</title>
+</head>
+
+<body>
+  <!-- Cabecera -->
+  <header>
+    <nav class=" navbar navbar-expand-lg bg-light position-sticky top-0 z-1">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ConstruPro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <div class=" text-center">
+            <span id="info-admin"></span>
+            <button type="button" class="btn btn-secondary" id="btn-logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenedor main -->
+  <main class="container d-flex flex-column gap-5 p-5">
+    <section>
+      <!-- Formulario para ingresar los datos para crear o actualizar -->
+      <form id="product-form">
+        <h2 class="h2 text-center">Formulario ConstruPro</h2>
+        <div class="form-group py-2 text-start">
+          <label for="name">Nombre del producto</label>
+          <input type="text" class="form-control" id="name" aria-describedby="name"
+            placeholder="Ingresa nombre del producto">
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="image">Imagen</label>
+          <input type="text" class="form-control" id="image" aria-describedby="image"
+            placeholder="Ingresa url de la imagen">
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="category">Tipo de producto</label>
+          <select id="category" class="form-control">
+            <option value="" disabled selected hidden>Selecciona tipo</option>
+            <option value="material">Material</option>
+            <option value="maquinaria">Maquinaria</option>
+            <option value="herramientas">Herramientas</option>
+          </select>
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="price">Precio</label>
+          <input type="text" class="form-control" id="price" aria-describedby="price"
+            placeholder="Ingresa precio por unidad">
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="amount">Cantidad</label>
+          <input type="text" class="form-control" id="amount" aria-describedby="amount"
+            placeholder="Ingresa cantidad del producto">
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="description">Descripción</label>
+          <textarea id="description" class="form-control" placeholder="Agrega una descripción del producto"></textarea>
+        </div>
+        <div class="form-group py-2 text-start">
+          <label for="status">Estado del producto</label>
+          <select id="status" class="form-control">
+            <option value="" disabled selected hidden>Selecciona estado</option>
+            <option value="disponible">Disponible</option>
+            <option value="agotado">Agotado</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="reset" class="btn btn-info">Limpiar</button>
+      </form>
+    </section>
+    <hr>
+    <section>
+      <h2 class="text-center">Listado de productos</h2>
+      <table class="table text-center text-capitalize">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Precio por unidad</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Valor total</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se pintarán los datos -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Píe de página -->
+  <footer class="d-flex justify-content-center">
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2024 Riwi. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Añadimos el archivo de javacript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="/src/js/admin.js"></script>
+  <script type="module" src="/src/js/logout.js"></script>
+</body>
+
+</html>
