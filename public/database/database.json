@@ -1,0 +1,89 @@
+{
+  "adminUsers": [
+    {
+      "id": "1",
+      "fullName": "Edwin Carmona",
+      "userName": "ecc",
+      "email": "carmonaedwin@mail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "fullName": "Pepito Perez",
+      "userName": "pepe",
+      "email": "pepe@mail.com",
+      "password": "123"
+    },
+    {
+      "id": "b729",
+      "fullName": "Alfredo",
+      "userName": "alf",
+      "email": "alf73@mail.com",
+      "password": "5555"
+    },
+    {
+      "id": "84fa",
+      "fullName": "edu campos",
+      "userName": "ed",
+      "email": "edu@mail.com",
+      "password": "534"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "productName": "Taladro",
+      "imageUrl": "https://www.atrial.com.co/wp-content/uploads/2021/10/taladro-inalambrico-3-8-12-v-pretul-c5a.png",
+      "category": "maquinaria",
+      "price": "200",
+      "amount": "1",
+      "status": "disponible",
+      "description": "Lorem lorem lorem lorem",
+      "adminId": "1"
+    },
+    {
+      "id": "2",
+      "productName": "Caja de herramientas",
+      "imageUrl": "https://dovicenter.co/wp-content/uploads/2023/02/taladro-inalambrico-24-voltios-percutor-tipo-dewalt-1.webp",
+      "category": "herramientas",
+      "price": "150",
+      "amount": "2",
+      "status": "disponible",
+      "description": "Lorem lorem lorem lorem",
+      "adminId": "2"
+    },
+    {
+      "id": "3",
+      "productName": "Cemento",
+      "imageUrl": "https://upick-co.s3.amazonaws.com/uploads/product/photo/42053/D_NQ_NP_723168-MLV29014061348_122018-O.jpg",
+      "category": "material",
+      "price": "300",
+      "amount": "3",
+      "status": "disponible",
+      "description": "Lorem lorem lorem lorem",
+      "adminId": "3"
+    },
+    {
+      "productName": "casco",
+      "imageUrl": "https://img.freepik.com/foto-gratis/casco-amarillo-sobre-mesa_144627-8586.jpg",
+      "category": "material",
+      "price": "350",
+      "amount": "5",
+      "description": "Este es un casco de prueba",
+      "status": "disponible",
+      "adminId": "b729",
+      "id": "f737"
+    },
+    {
+      "productName": "Pala",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_746470-MCO71300143942_082023-O.webp",
+      "category": "material",
+      "price": "75",
+      "amount": "1",
+      "description": "Esta es una pala ora ora ora",
+      "status": "disponible",
+      "adminId": "1",
+      "id": "f01d"
+    }
+  ]
+}

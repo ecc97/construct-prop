@@ -1,0 +1,23 @@
+// Nombre Completo: Edwin Carmona Cifuentes
+// Clan: Dell
+// fecha: 04-06-2024
+
+// Import normalize
+@import url('/src/scss/normalize.scss');
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// dar un ancho fijo a las imágenes de cada tabla
+.productImage {
+    width: 180px;
+}
+
+// alineamos verticalmente los textos de la tabla
+.table > tbody {
+    vertical-align: middle;
+}
+
+// quitar la opción de alargar textarea
+textarea {
+    resize: none;
+}
