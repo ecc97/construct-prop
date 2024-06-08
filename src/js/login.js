@@ -5,7 +5,7 @@ fecha: 04-06-2024
 */
 //obtenemos el formulario y sus campos
 const form = document.querySelector('#login-form')
-const username = document.querySelector('#username')
+const usernameOrEmail = document.querySelector('#username-or-email')
 const password = document.querySelector('#password')
 
 const URL_API_USERS = `http://localhost:3000/adminUsers` // url endpoint de adminsUsers
@@ -13,8 +13,14 @@ const URL_API_USERS = `http://localhost:3000/adminUsers` // url endpoint de admi
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const response = await fetch(`${URL_API_USERS}?userName=${username.value}`)
-    const data = await response.json()
+    // Realiza dos solicitudes: una para buscar por nombre de usuario y otra para buscar por correo electrónico
+    const responseUsername = await fetch(`${URL_API_USERS}?userName=${usernameOrEmail.value}`)
+    const responseEmail = await fetch(`${URL_API_USERS}?email=${usernameOrEmail.value}`)
+    const dataUsername = await responseUsername.json()
+    const dataEmail = await responseEmail.json()
+
+    // Combina los resultados
+    const data = dataUsername.length > 0 ? dataUsername : dataEmail;
 
     if(data.length > 0) { // si la longitud del array data es mayor que 0
         const user = data[0] // pon a data en la posición 0
