@@ -11,11 +11,13 @@ const fullName = document.getElementById('full-name')
 const username = document.getElementById('username')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
+const confirmPassword = document.getElementById('confirm-password')
 
 //evento en el form
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const checkEmail = await validateEmail(email)
+    const checkPassword = validatePasswords(password, confirmPassword)
 
     const newUser = {
         fullName: fullName.value,
@@ -27,9 +29,13 @@ form.addEventListener('submit', async (e) => {
 
     // si el email no existe registramos admin
     if(checkEmail === true){
-        registerAdmin(newUser)
-        alert(`Bienvenido ${username.value}, tu cuenta ha sido creada`)
-        window.location.href = 'login.html'
+        if(checkPassword === true){ // verificar contraseñas que sean iguales
+            registerAdmin(newUser)
+            alert(`Bienvenido ${username.value}, tu cuenta ha sido creada`)
+            window.location.href = 'login.html'
+        } else {
+            alert('Las contraseñas no coinciden')
+        }
     } else {
         alert('Ya existe este correo')
     }
@@ -46,6 +52,15 @@ async function validateEmail(email){
    } else {
         return false // retornamos falso
    }
+}
+
+// validar campos contraseñas que sean igual
+function validatePasswords(password, confirmPassword) {
+    if(password.value === confirmPassword.value){
+        return true
+    } else {
+        return false
+    }
 }
 
 // función para registrar usuarios admin
